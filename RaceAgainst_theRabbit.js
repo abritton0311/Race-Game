@@ -1,6 +1,5 @@
 
-<script>
-		function Animal(name, speed, focus) {
+function Animal(name, speed, focus) {
 			this.name = name;
 			//values: 0 - 9
 			this.speed = speed;
@@ -9,7 +8,7 @@
 			var hitSpeedBump = false;
 			this.isFocused = function () {
 				return Math.floor(Math.random () * 10) < this.focus;
-		}
+		};
 	this.advance = function () {
 		if (this.isFocused ()) {
 			this.position += this.speed;
@@ -17,11 +16,11 @@
 		//Sets position back by 10.
 		this.speedBump = function () {
 			this.position -= 10;
-		}
-	}
+		};
+	};
 	this.progressReport = function () {
-		return this.name + " is at: " + this.position
-	}
+		return this.name + " is at: " + this.position;
+	};
 }
 	var rabbit = new Animal("Rocky", 8, 3);
 	var turtle = new Animal("Myrtle", 3, 7);
@@ -29,8 +28,8 @@
 
 	while (rabbit.position < meters && turtle.position < meters) {
 		if (rabbit.postion >= 60 && Animal.hitSpeedBump === false) {
-    	rabbit.speedBump()
-   		Animal.hitSpeedBump = true
+    	rabbit.speedBump();
+   		Animal.hitSpeedBump = true;
    		alert("Uh oh, Rocky hit a speed bump and moves back 10 meters\n\n" + rabbit.progressReport() + "--" + turtle.progressReport());
 		} else if (turtle.position >= 60 && Animal.hitSpeedBump === false) {
     	turtle.speedBump();
@@ -42,4 +41,3 @@
 			alert(rabbit.progressReport() + "--" + turtle.progressReport());
 		}
 	}
-<script>
