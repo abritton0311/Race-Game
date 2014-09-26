@@ -5,7 +5,7 @@ function Animal(name, speed, focus) {
 			this.speed = speed;
 			this.focus = focus;
 			this.position = 0;
-			var hitSpeedBump = false;
+			this.hitSpeedBump = false;
 			this.isFocused = function () {
 				return Math.floor(Math.random () * 10) < this.focus;
 		};
@@ -27,7 +27,7 @@ function Animal(name, speed, focus) {
 	var meters = 100;
 
 	while (rabbit.position < meters && turtle.position < meters) {
-		if (rabbit.postion >= 60 && Animal.hitSpeedBump === false) {
+		if (rabbit.position >= 60 && Animal.hitSpeedBump === false) {
     	rabbit.speedBump();
    		Animal.hitSpeedBump = true;
    		alert("Uh oh, Rocky hit a speed bump and moves back 10 meters\n\n" + rabbit.progressReport() + "--" + turtle.progressReport());
