@@ -27,6 +27,9 @@ function Animal(name, speed, focus) {
 	var hitSpeedBump = false;
 
 	while (rabbit.position < meters && turtle.position < meters) {
+		rabbit.advance();
+			turtle.advance();
+			alert(rabbit.progressReport() + "--" + turtle.progressReport());
 		if (rabbit.position >= 60 && hitSpeedBump === false) {
     	rabbit.speedBump();
    		hitSpeedBump = true;
@@ -35,9 +38,6 @@ function Animal(name, speed, focus) {
     	turtle.speedBump();
     	hitSpeedBump = true;
     	alert("Uh oh, Myrtle hit a speed bump and moves back 10 meters\n\n" + rabbit.progressReport() + "--" + turtle.progressReport());
-		} else {
-   		rabbit.advance();
-			turtle.advance();
-			alert(rabbit.progressReport() + "--" + turtle.progressReport());
 		}
+   			}
 	}
