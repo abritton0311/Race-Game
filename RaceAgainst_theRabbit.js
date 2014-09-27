@@ -39,11 +39,11 @@ function Animal(name, speed, focus) {
 				//announces winner for first racer to get to 100 meters.
 				if (rabbit.position >= 100 && rabbit.position > turtle.position) {
 					alert ("Speed was key to this race....Rocky wins!");
-				if(turtle.position >= 100 && turtle.position > rabbit.position) {
+				}
+				if (turtle.position >= 100 && turtle.position > rabbit.position) {
 					alert ("Slow and steady wins the race....Myrtle is the winner!");
 				}
-
-				}
+				
 		//first racer to hit 60, hits the speedbump and goes back 10 meters. 
 		if (rabbit.position >= 60 && hitSpeedBump === false) {
     	rabbit.speedBump();
