@@ -30,6 +30,13 @@ function Animal(name, speed, focus) {
 		rabbit.advance();
 			turtle.advance();
 			alert(rabbit.progressReport() + "--" + turtle.progressReport());
+				if (rabbit.position >= 100 && rabbit.position > turtle.position) {
+					alert ("Speed was key to this race....Rocky wins!");
+				if(turtle.position >= 100 && turtle.position > rabbit.position) {
+					alert ("Slow and steady wins the race....Myrtle is the winner!");
+				}
+
+				}
 		if (rabbit.position >= 60 && hitSpeedBump === false) {
     	rabbit.speedBump();
    		hitSpeedBump = true;
@@ -39,5 +46,5 @@ function Animal(name, speed, focus) {
     	hitSpeedBump = true;
     	alert("Uh oh, Myrtle hit a speed bump and moves back 10 meters\n\n" + rabbit.progressReport() + "--" + turtle.progressReport());
 		}
-   			}
-	}
+   	}
+	
